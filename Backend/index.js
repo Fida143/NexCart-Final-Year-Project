@@ -11,6 +11,13 @@ import path from "path";
 
 // cofig env
 const app = express();
+app.use(cors(
+  {
+    origin:{["https://deploy-mern-frontend.vercel.app/"],
+            methods:["POST","GET"],
+            credentials:true
+           }
+      ));
 
 dotenv.config();
 
